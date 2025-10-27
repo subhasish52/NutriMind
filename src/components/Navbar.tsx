@@ -46,33 +46,46 @@ const Navbar = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <button
-              onClick={() => scrollToSection("train")}
+              onClick={() => scrollToSection("hero")}
               className="text-foreground hover:text-primary transition-colors"
             >
-              Train With Us
+              Home
             </button>
-            <Link to="/find-gym" className="text-foreground hover:text-primary transition-colors">
-              Find a Gym
-            </Link>
-            <Link to="/blog" className="text-foreground hover:text-primary transition-colors">
-              Blog
-            </Link>
-            <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
-              Contact
-            </Link>
             <DropdownMenu>
               <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary transition-colors">
-                Gym Packages <ChevronDown className="ml-1 h-4 w-4" />
+                Programs <ChevronDown className="ml-1 h-4 w-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="bg-card border-border">
                 <DropdownMenuItem>
-                  <button onClick={() => scrollToSection("packages")}>Gym Plans</button>
+                  <button onClick={() => scrollToSection("services")}>Our Services</button>
                 </DropdownMenuItem>
                 <DropdownMenuItem>
-                  <Link to="/gym-packages?tab=renewal">Renewal</Link>
+                  <button onClick={() => scrollToSection("packages")}>Gym Plans</button>
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+            <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
+              Coaching
+            </Link>
+            <button
+              onClick={() => scrollToSection("packages")}
+              className="text-foreground hover:text-primary transition-colors"
+            >
+              Membership
+            </button>
+            <Link to="/blog" className="text-foreground hover:text-primary transition-colors">
+              About Us
+            </Link>
+          </div>
+
+          {/* Login/Sign Up Buttons */}
+          <div className="hidden md:flex items-center space-x-4">
+            <Button variant="outline" size="sm">
+              Login
+            </Button>
+            <Button size="sm">
+              Sign Up
+            </Button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -85,38 +98,45 @@ const Navbar = () => {
         {isOpen && (
           <div className="md:hidden mt-4 pb-4 space-y-4 animate-fade-in">
             <button
-              onClick={() => scrollToSection("train")}
+              onClick={() => scrollToSection("hero")}
               className="block w-full text-left text-foreground hover:text-primary transition-colors"
             >
-              Train With Us
+              Home
             </button>
-            <Link
-              to="/find-gym"
-              className="block text-foreground hover:text-primary transition-colors"
-              onClick={() => setIsOpen(false)}
+            <button
+              onClick={() => scrollToSection("services")}
+              className="block w-full text-left text-foreground hover:text-primary transition-colors"
             >
-              Find a Gym
-            </Link>
-            <Link
-              to="/blog"
-              className="block text-foreground hover:text-primary transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Blog
-            </Link>
+              Programs
+            </button>
             <Link
               to="/contact"
               className="block text-foreground hover:text-primary transition-colors"
               onClick={() => setIsOpen(false)}
             >
-              Contact
+              Coaching
             </Link>
             <button
               onClick={() => scrollToSection("packages")}
               className="block w-full text-left text-foreground hover:text-primary transition-colors"
             >
-              Gym Plans
+              Membership
             </button>
+            <Link
+              to="/blog"
+              className="block text-foreground hover:text-primary transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              About Us
+            </Link>
+            <div className="flex gap-2 pt-4">
+              <Button variant="outline" size="sm" className="flex-1">
+                Login
+              </Button>
+              <Button size="sm" className="flex-1">
+                Sign Up
+              </Button>
+            </div>
           </div>
         )}
       </div>
