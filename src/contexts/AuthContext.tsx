@@ -1,9 +1,25 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-const AuthContext = createContext(undefined);
+interface User {
+  username: string;
+  email: string;
+  name: string;
+  membershipPlan: string;
+  fitnessGoals: string[];
+}
 
-export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useState(null);
+interface AuthContextType {
+  user: User | null;
+  login: (username: string, password: string) => boolean;
+  signup: (name: string, email: string, password: string) => void;
+  logout: () => void;
+  isAuthenticated: boolean;
+}
+
+const AuthContext = createContext<AuthContextType | undefined>(undefined);
+
+export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+  const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
     const savedUser = localStorage.getItem('fitmaker_user');
@@ -12,9 +28,9 @@ export const AuthProvider = ({ children }) => {
     }
   }, []);
 
-  const login = (username, password) => {
+  const login = (username: string, password: string): boolean => {
     if (username === 'Modi' && password === 'rahulgandhi') {
-      const userData = {
+      const userData: User = {
         username: 'Modi',
         email: 'modi@fitmaker.com',
         name: 'Modi',
@@ -28,8 +44,8 @@ export const AuthProvider = ({ children }) => {
     return false;
   };
 
-  const signup = (name, email, password) => {
-    const userData = {
+  const signup = (name: string, email: string, password: string) => {
+    const userData: User = {
       username: name,
       email,
       name,

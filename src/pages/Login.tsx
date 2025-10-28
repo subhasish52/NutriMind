@@ -5,22 +5,30 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/hooks/use-toast';
 
-const SignUp = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
+const Login = () => {
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const { signup } = useAuth();
+  const { login } = useAuth();
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  const handleSignup = (e) => {
+  const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    signup(name, email, password);
-    toast({
-      title: "Account Created",
-      description: "Welcome to FitMaker community!",
-    });
-    navigate('/');
+    const success = login(username, password);
+    
+    if (success) {
+      toast({
+        title: "Login Successful",
+        description: "Welcome back to FitMaker!",
+      });
+      navigate('/');
+    } else {
+      toast({
+        title: "Login Failed",
+        description: "Invalid credentials. Try Modi / rahulgandhi",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -33,36 +41,21 @@ const SignUp = () => {
             <h1 className="text-4xl font-bold mb-2">
               Fit<span className="text-primary">Maker</span>
             </h1>
-            <h2 className="text-2xl font-semibold mb-2">Join FitMaker</h2>
-            <p className="text-muted-foreground">Start your transformation today</p>
+            <h2 className="text-2xl font-semibold mb-2">Welcome Back</h2>
+            <p className="text-muted-foreground">Login to continue your fitness journey</p>
           </div>
 
-          <form onSubmit={handleSignup} className="space-y-6">
+          <form onSubmit={handleLogin} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-2">
-                Full Name
+              <label htmlFor="username" className="block text-sm font-medium mb-2">
+                Username
               </label>
               <Input
-                id="name"
+                id="username"
                 type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Enter your name"
-                className="w-full bg-background/50 border-primary/30"
-                required
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">
-                Email
-              </label>
-              <Input
-                id="email"
-                type="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                placeholder="Enter your email"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="Enter username"
                 className="w-full bg-background/50 border-primary/30"
                 required
               />
@@ -77,27 +70,35 @@ const SignUp = () => {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Create a password"
+                placeholder="Enter password"
                 className="w-full bg-background/50 border-primary/30"
                 required
               />
             </div>
 
             <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-white py-6 text-lg">
-              Sign Up
+              Login
             </Button>
           </form>
 
           <p className="text-center mt-6 text-muted-foreground">
-            Already have an account?{' '}
-            <Link to="/login" className="text-primary hover:underline font-semibold">
-              Login
+            Don't have an account?{' '}
+            <Link to="/signup" className="text-primary hover:underline font-semibold">
+              Sign Up
             </Link>
           </p>
+
+          <div className="mt-6 p-4 bg-primary/10 border border-primary/30 rounded-lg">
+            <p className="text-xs text-center text-muted-foreground">
+              <strong>Test Credentials:</strong><br />
+              Username: Modi<br />
+              Password: rahulgandhi
+            </p>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default SignUp;
+export default Login;
