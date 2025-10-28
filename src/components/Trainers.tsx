@@ -1,27 +1,35 @@
 import { motion } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import trainer1 from "@/assets/trainer-1.jpg";
+import trainer2 from "@/assets/trainer-2.jpg";
+import trainer3 from "@/assets/trainer-3.jpg";
+import trainer4 from "@/assets/trainer-4.jpg";
 
 const trainers = [
   {
     name: "Sam Cole",
     role: "Personal Trainer",
     specialty: "Strength Training & Weight Loss",
+    image: trainer1,
   },
   {
     name: "Michael Harris",
     role: "Personal Trainer",
     specialty: "Muscle Building & Nutrition",
+    image: trainer2,
   },
   {
     name: "John Anderson",
     role: "Personal Trainer",
     specialty: "CrossFit & Conditioning",
+    image: trainer3,
   },
   {
     name: "Tom Blake",
     role: "Personal Trainer",
     specialty: "Yoga & Flexibility",
+    image: trainer4,
   },
 ];
 
@@ -65,6 +73,11 @@ const Trainers = () => {
               className="bg-card rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300 group"
             >
               <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-secondary relative overflow-hidden">
+                <img 
+                  src={trainer.image} 
+                  alt={trainer.name}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
               </div>
               <div className="p-4">
