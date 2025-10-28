@@ -1,17 +1,14 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { Menu, X, ChevronDown } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { Menu, X, ChevronDown, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { useAuth } from "@/contexts/AuthContext";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { isAuthenticated, logout, user } = useAuth();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,12 +18,18 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: 'smooth' });
       setIsOpen(false);
     }
+  };
+
+  const handleLogout = () => {
+    logout();
+    navigate('/');
+    setIsOpen(false);
   };
 
   return (
@@ -45,47 +48,97 @@ const Navbar = () => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <button
-              onClick={() => scrollToSection("hero")}
-              className="text-foreground hover:text-primary transition-colors"
-            >
+            <Link to="/" className="text-foreground hover:text-primary transition-colors">
               Home
-            </button>
-            <DropdownMenu>
-              <DropdownMenuTrigger className="flex items-center text-foreground hover:text-primary transition-colors">
-                Programs <ChevronDown className="ml-1 h-4 w-4" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="bg-card border-border">
-                <DropdownMenuItem>
-                  <button onClick={() => scrollToSection("services")}>Our Services</button>
-                </DropdownMenuItem>
-                <DropdownMenuItem>
-                  <button onClick={() => scrollToSection("packages")}>Gym Plans</button>
-                </DropdownMenuItem>
-              </DropdownMenuContent>
-            </DropdownMenu>
-            <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
-              Coaching
             </Link>
-            <button
-              onClick={() => scrollToSection("packages")}
-              className="text-foreground hover:text-primary transition-colors"
-            >
+            
+            {/* Programs Dropdown */}
+            <div className="relative group">
+              <button className="text-foreground hover:text-primary transition-colors flex items-center">
+                Programs
+                <ChevronDown size={16} className="ml-1" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <button onClick={() => scrollToSection('services')} className="block w-full text-left px-4 py-2 hover:bg-accent transition-colors">
+                  Our Services
+                </button>
+                <button onClick={() => scrollToSection('plans')} className="block w-full text-left px-4 py-2 hover:bg-accent transition-colors">
+                  Gym Plans
+                </button>
+              </div>
+            </div>
+
+            <div className="relative group">
+              <button className="text-foreground hover:text-primary transition-colors flex items-center">
+                Coaching
+                <ChevronDown size={16} className="ml-1" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <Link to="/train-with-us" className="block px-4 py-2 hover:bg-accent transition-colors">
+                  Personal
+                </Link>
+                <Link to="/train-with-us" className="block px-4 py-2 hover:bg-accent transition-colors">
+                  Online
+                </Link>
+              </div>
+            </div>
+
+            <Link to="/gym-packages" className="text-foreground hover:text-primary transition-colors">
               Membership
-            </button>
-            <Link to="/blog" className="text-foreground hover:text-primary transition-colors">
-              About Us
+            </Link>
+
+            <div className="relative group">
+              <button className="text-foreground hover:text-primary transition-colors flex items-center">
+                Services
+                <ChevronDown size={16} className="ml-1" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <Link to="/our-services" className="block px-4 py-2 hover:bg-accent transition-colors">
+                  Our Services
+                </Link>
+                <Link to="/subscription" className="block px-4 py-2 hover:bg-accent transition-colors">
+                  Track/Buy Subscription
+                </Link>
+              </div>
+            </div>
+
+            <Link to="/train-with-ai" className="text-foreground hover:text-primary transition-colors">
+              Train With AI
+            </Link>
+
+            <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
+              Contact Us
             </Link>
           </div>
 
-          {/* Login/Sign Up Buttons */}
+          {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" size="sm">
-              Login
-            </Button>
-            <Button size="sm">
-              Sign Up
-            </Button>
+            {isAuthenticated ? (
+              <>
+                <Link to="/profile">
+                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                    <User size={18} className="mr-2" />
+                    {user?.name}
+                  </Button>
+                </Link>
+                <Button onClick={handleLogout} className="bg-primary hover:bg-primary/90">
+                  Logout
+                </Button>
+              </>
+            ) : (
+              <>
+                <Link to="/login">
+                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white">
+                    Login
+                  </Button>
+                </Link>
+                <Link to="/signup">
+                  <Button className="bg-primary hover:bg-primary/90">
+                    Sign Up
+                  </Button>
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -96,46 +149,60 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="md:hidden mt-4 pb-4 space-y-4 animate-fade-in">
-            <button
-              onClick={() => scrollToSection("hero")}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection("services")}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors"
-            >
-              Programs
-            </button>
-            <Link
-              to="/contact"
-              className="block text-foreground hover:text-primary transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              Coaching
-            </Link>
-            <button
-              onClick={() => scrollToSection("packages")}
-              className="block w-full text-left text-foreground hover:text-primary transition-colors"
-            >
-              Membership
-            </button>
-            <Link
-              to="/blog"
-              className="block text-foreground hover:text-primary transition-colors"
-              onClick={() => setIsOpen(false)}
-            >
-              About Us
-            </Link>
-            <div className="flex gap-2 pt-4">
-              <Button variant="outline" size="sm" className="flex-1">
-                Login
-              </Button>
-              <Button size="sm" className="flex-1">
-                Sign Up
-              </Button>
+          <div className="md:hidden absolute top-full left-0 right-0 bg-card border-t border-border shadow-lg">
+            <div className="flex flex-col p-4 space-y-4">
+              <Link to="/" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
+                Home
+              </Link>
+              <button onClick={() => scrollToSection('services')} className="text-left text-foreground hover:text-primary transition-colors py-2">
+                Our Services
+              </button>
+              <button onClick={() => scrollToSection('plans')} className="text-left text-foreground hover:text-primary transition-colors py-2">
+                Gym Plans
+              </button>
+              <Link to="/train-with-us" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
+                Coaching
+              </Link>
+              <Link to="/gym-packages" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
+                Membership
+              </Link>
+              <Link to="/our-services" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
+                Services
+              </Link>
+              <Link to="/train-with-ai" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
+                Train With AI
+              </Link>
+              <Link to="/contact" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
+                Contact Us
+              </Link>
+              <div className="flex flex-col space-y-2 pt-4 border-t border-border">
+                {isAuthenticated ? (
+                  <>
+                    <Link to="/profile" onClick={() => setIsOpen(false)}>
+                      <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white w-full">
+                        <User size={18} className="mr-2" />
+                        Profile
+                      </Button>
+                    </Link>
+                    <Button onClick={handleLogout} className="bg-primary hover:bg-primary/90 w-full">
+                      Logout
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Link to="/login" onClick={() => setIsOpen(false)}>
+                      <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-white w-full">
+                        Login
+                      </Button>
+                    </Link>
+                    <Link to="/signup" onClick={() => setIsOpen(false)}>
+                      <Button className="bg-primary hover:bg-primary/90 w-full">
+                        Sign Up
+                      </Button>
+                    </Link>
+                  </>
+                )}
+              </div>
             </div>
           </div>
         )}
