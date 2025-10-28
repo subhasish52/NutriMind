@@ -13,7 +13,7 @@ const SignUp = () => {
   const navigate = useNavigate();
   const { toast } = useToast();
 
-  const handleSignup = (e: React.FormEvent) => {
+  const handleSignup = (e) => {
     e.preventDefault();
     signup(name, email, password);
     toast({
