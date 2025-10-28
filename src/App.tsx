@@ -23,35 +23,36 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <AuthProvider>
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
         <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
-            <Route path="/train-with-us" element={<TrainWithUs />} />
-            <Route path="/train-with-ai" element={<ProtectedRoute><TrainWithAI /></ProtectedRoute>} />
-            <Route path="/find-gym" element={<FindGym />} />
-            <Route path="/blog" element={<BlogPage />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/gym-packages" element={<GymPackages />} />
-            <Route path="/our-services" element={<ProtectedRoute><OurServices /></ProtectedRoute>} />
-            <Route path="/subscription" element={<ProtectedRoute><Subscription /></ProtectedRoute>} />
-            <Route path="/health-tracking" element={<ProtectedRoute><HealthTracking /></ProtectedRoute>} />
-            <Route path="/gamify" element={<ProtectedRoute><Gamify /></ProtectedRoute>} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <AuthProvider>
+            <Toaster />
+            <Sonner />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+              <Route path="/train-with-us" element={<TrainWithUs />} />
+              <Route path="/train-with-ai" element={<ProtectedRoute><TrainWithAI /></ProtectedRoute>} />
+              <Route path="/find-gym" element={<FindGym />} />
+              <Route path="/blog" element={<BlogPage />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/gym-packages" element={<GymPackages />} />
+              <Route path="/our-services" element={<ProtectedRoute><OurServices /></ProtectedRoute>} />
+              <Route path="/subscription" element={<ProtectedRoute><Subscription /></ProtectedRoute>} />
+              <Route path="/health-tracking" element={<ProtectedRoute><HealthTracking /></ProtectedRoute>} />
+              <Route path="/gamify" element={<ProtectedRoute><Gamify /></ProtectedRoute>} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </AuthProvider>
         </BrowserRouter>
       </TooltipProvider>
-    </AuthProvider>
-  </QueryClientProvider>
-);
+    </QueryClientProvider>
+  );
+};
 
 export default App;
