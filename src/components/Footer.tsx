@@ -9,10 +9,10 @@ const Footer = () => {
           {/* Brand Section */}
           <div>
             <h3 className="text-2xl font-bold mb-4">
-              Fit<span className="text-primary">Maker</span>
+              nutrimind<span className="text-primary">.ai</span>
             </h3>
             <p className="text-muted-foreground mb-4">
-              Transform Your Body with FitMaker, Your Trusted Partner in Fitness. With Over 5 Years of Experience, We Offer Expert Coaching, Tailored Workout Plans, and Comprehensive Nutritional Guidance.
+              Transform Your Body with nutrimind.ai, Your Trusted Partner in Fitness. With Over 5 Years of Experience, We Offer Expert Coaching, Tailored Workout Plans, and Comprehensive Nutritional Guidance.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
@@ -108,14 +108,14 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-2 text-muted-foreground">
                 <Mail size={20} className="text-primary flex-shrink-0" />
-                <span>fitmaker@Email.Com</span>
+                <span>contact@nutrimind.ai</span>
               </li>
             </ul>
           </div>
         </div>
 
         <div className="border-t border-border pt-8 text-center text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} FitMaker. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} nutrimind.ai. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -6,7 +6,7 @@ const testimonials = [
   {
     name: "Steven Haward",
     role: "Our Trainer",
-    text: "I've Been Using Fitmaker For The Past Three Months, And I'm Genuinely Impressed. The Website Is Easy To Navigate And Everything Is Laid Out Clearly. I Purchased The Premium Plan And The Personalized Coaching Has Been A Game-Changer For Me. My Coach Is Incredibly Supportive And Always Available To Answer My Questions. The Custom Meal Plans Have Helped Me Stay On Track With My Goals. Highly Recommend For Anyone Serious About Their Fitness Journey!",
+    text: "I've Been Using nutrimind.ai For The Past Three Months, And I'm Genuinely Impressed. The Website Is Easy To Navigate And Everything Is Laid Out Clearly. I Purchased The Premium Plan And The Personalized Coaching Has Been A Game-Changer For Me. My Coach Is Incredibly Supportive And Always Available To Answer My Questions. The Custom Meal Plans Have Helped Me Stay On Track With My Goals. Highly Recommend For Anyone Serious About Their Fitness Journey!",
   },
 ];
 

@@ -44,7 +44,7 @@ const Blog = () => {
         >
           <div>
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
-              Fitmaker <span className="text-primary">Blog Posts</span>
+              nutrimind.ai <span className="text-primary">Blog Posts</span>
             </h2>
             <p className="text-muted-foreground">
               Discover Essential Tips To Maximize Your Workout Results And Reach Your Fitness Goals Faster.

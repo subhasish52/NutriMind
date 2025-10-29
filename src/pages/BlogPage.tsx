@@ -57,7 +57,7 @@ const BlogPage = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl font-bold mb-6">
-              FitMaker <span className="text-primary">Blog</span>
+              nutrimind.ai <span className="text-primary">Blog</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
               Stay informed with the latest fitness tips, workout guides, and nutrition advice.

@@ -17,7 +17,7 @@ const TrainWithUs = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl font-bold mb-6">
-              Train With <span className="text-primary">FitMaker</span>
+              Train With <span className="text-primary">nutrimind.ai</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Join our community of fitness enthusiasts and work with certified trainers to achieve your goals.

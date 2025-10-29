@@ -19,7 +19,7 @@ const Login = () => {
     if (success) {
       toast({
         title: "Login Successful",
-        description: "Welcome back to FitMaker!",
+        description: "Welcome back to nutrimind.ai!",
       });
       navigate('/');
     } else {
@@ -39,7 +39,7 @@ const Login = () => {
         <div className="bg-card/50 backdrop-blur-xl border border-primary/20 rounded-2xl p-8 shadow-2xl">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold mb-2">
-              Fit<span className="text-primary">Maker</span>
+              nutrimind<span className="text-primary">.ai</span>
             </h1>
             <h2 className="text-2xl font-semibold mb-2">Welcome Back</h2>
             <p className="text-muted-foreground">Login to continue your fitness journey</p>

@@ -8,12 +8,12 @@ import {
 
 const faqs = [
   {
-    question: "What Is FitMaker And How Can It Help Me Reach My Fitness Goals?",
+    question: "What Is nutrimind.ai And How Can It Help Me Reach My Fitness Goals?",
     answer:
-      "FitMaker Is An Online Fitness Platform That Offers Personalized Workout Plans, Expert Coaching, And Comprehensive Nutritional Guidance. Whether You're Looking To Lose Weight, Build Muscle, Or Simply Stay Fit, Our Tailored Programs And Community Support Will Help You Achieve Your Fitness Goals.",
+      "nutrimind.ai Is An Online Fitness Platform That Offers Personalized Workout Plans, Expert Coaching, And Comprehensive Nutritional Guidance. Whether You're Looking To Lose Weight, Build Muscle, Or Simply Stay Fit, Our Tailored Programs And Community Support Will Help You Achieve Your Fitness Goals.",
   },
   {
-    question: "How Do I Get Started With A Workout Plan On FitMaker?",
+    question: "How Do I Get Started With A Workout Plan On nutrimind.ai?",
     answer:
       "Getting started is easy! Simply sign up for an account, complete our fitness assessment questionnaire, and choose a plan that fits your goals. Our system will generate a personalized workout plan based on your fitness level, preferences, and objectives.",
   },

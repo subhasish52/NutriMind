@@ -18,7 +18,7 @@ const SignUp = () => {
     signup(name, email, password);
     toast({
       title: "Account Created",
-      description: "Welcome to FitMaker community!",
+      description: "Welcome to nutrimind.ai community!",
     });
     navigate('/');
   };
@@ -31,9 +31,9 @@ const SignUp = () => {
         <div className="bg-card/50 backdrop-blur-xl border border-primary/20 rounded-2xl p-8 shadow-2xl">
           <div className="text-center mb-8">
             <h1 className="text-4xl font-bold mb-2">
-              Fit<span className="text-primary">Maker</span>
+              nutrimind<span className="text-primary">.ai</span>
             </h1>
-            <h2 className="text-2xl font-semibold mb-2">Join FitMaker</h2>
+            <h2 className="text-2xl font-semibold mb-2">Join nutrimind.ai</h2>
             <p className="text-muted-foreground">Start your transformation today</p>
           </div>
 

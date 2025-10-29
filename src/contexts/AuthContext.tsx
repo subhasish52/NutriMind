@@ -22,7 +22,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
-    const savedUser = localStorage.getItem('fitmaker_user');
+    const savedUser = localStorage.getItem('nutrimind_user');
     if (savedUser) {
       setUser(JSON.parse(savedUser));
     }
@@ -32,13 +32,13 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     if (username === 'Modi' && password === 'rahulgandhi') {
       const userData: User = {
         username: 'Modi',
-        email: 'modi@fitmaker.com',
+        email: 'modi@nutrimind.ai',
         name: 'Modi',
         membershipPlan: 'Pro Plan',
         fitnessGoals: ['Weight Loss', 'Muscle Building']
       };
       setUser(userData);
-      localStorage.setItem('fitmaker_user', JSON.stringify(userData));
+      localStorage.setItem('nutrimind_user', JSON.stringify(userData));
       return true;
     }
     return false;
@@ -53,12 +53,12 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       fitnessGoals: ['Getting Started']
     };
     setUser(userData);
-    localStorage.setItem('fitmaker_user', JSON.stringify(userData));
+    localStorage.setItem('nutrimind_user', JSON.stringify(userData));
   };
 
   const logout = () => {
     setUser(null);
-    localStorage.removeItem('fitmaker_user');
+    localStorage.removeItem('nutrimind_user');
   };
 
   return (

@@ -49,7 +49,7 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground">fitmaker@email.com</p>
+                    <p className="text-muted-foreground">contact@nutrimind.ai</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">

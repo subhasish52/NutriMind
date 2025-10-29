@@ -21,7 +21,7 @@ const FindGym = () => {
               Find a <span className="text-primary">Gym Near You</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto mb-8">
-              Discover FitMaker partner gyms in your area and start your fitness journey today.
+              Discover nutrimind.ai partner gyms in your area and start your fitness journey today.
             </p>
 
             <div className="max-w-2xl mx-auto flex gap-4">
@@ -44,7 +44,7 @@ const FindGym = () => {
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <div key={i} className="bg-card p-6 rounded-lg border border-border">
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary rounded-lg mb-4" />
-                <h3 className="text-xl font-bold mb-2">FitMaker Gym #{i}</h3>
+                <h3 className="text-xl font-bold mb-2">nutrimind.ai Gym #{i}</h3>
                 <p className="text-muted-foreground mb-4">123 Fitness Street, City</p>
                 <Button variant="outline" className="w-full">
                   View Details

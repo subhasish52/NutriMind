@@ -32,7 +32,7 @@ const GymFinder = () => {
             Find a Gym <span className="text-primary">Near Me</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto mb-8">
-            Discover FitMaker partner gyms in your area and start your fitness journey today
+            Discover nutrimind.ai partner gyms in your area and start your fitness journey today
           </p>
         </motion.div>
 

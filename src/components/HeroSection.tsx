@@ -171,7 +171,7 @@ const HeroSection = () => {
                 lineHeight: '1.1',
               }}
             >
-              With FitMaker
+              With nutrimind.ai
             </h1>
             <p 
               style={{
@@ -182,7 +182,7 @@ const HeroSection = () => {
                 lineHeight: '1.6',
               }}
             >
-              "Join The FitMaker Community And Transform Your Fitness Journey. Our Expert Coaches And Personalized Programs Are Designed To Help You Achieve Your Goals And Exceed Your Expectations. Ready To Make A Change?"
+              "Join The nutrimind.ai Community And Transform Your Fitness Journey. Our Expert Coaches And Personalized Programs Are Designed To Help You Achieve Your Goals And Exceed Your Expectations. Ready To Make A Change?"
             </p>
 
             <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}>
