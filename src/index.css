@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Disable scrolling */
-html, body {
-  overflow: hidden;
-  height: 100vh;
-}
-
 /* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
 All colors MUST be HSL.
 */
