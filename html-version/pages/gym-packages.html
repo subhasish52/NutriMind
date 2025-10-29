@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gym Packages - NutriMind.AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">Nutri<span class="text-primary">Mind</span></a>
+                <div class="nav-links desktop-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="gym-packages.html">Packages</a>
+                </div>
+                <div class="auth-buttons desktop-nav">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px; padding-bottom: 80px;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Gym <span class="text-primary">Packages</span></h1>
+                <p class="section-description">Choose the perfect plan that fits your fitness goals and budget</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-title">Starter Package</div>
+                    <div class="pricing-price">$39</div>
+                    <div class="pricing-duration">per month</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Gym access (Off-peak hours)</li>
+                        <li><i class="fas fa-check"></i> Locker facility</li>
+                        <li><i class="fas fa-check"></i> Basic equipment access</li>
+                        <li><i class="fas fa-times" style="color: var(--muted-foreground);"></i> Group classes</li>
+                        <li><i class="fas fa-times" style="color: var(--muted-foreground);"></i> Personal trainer</li>
+                    </ul>
+                    <button class="btn btn-outline" style="width: 100%;">Choose Plan</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">Best Value</span>
+                    <div class="pricing-title">Pro Package</div>
+                    <div class="pricing-price">$79</div>
+                    <div class="pricing-duration">per month</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 24/7 gym access</li>
+                        <li><i class="fas fa-check"></i> All group classes</li>
+                        <li><i class="fas fa-check"></i> Personal locker</li>
+                        <li><i class="fas fa-check"></i> 4 PT sessions/month</li>
+                        <li><i class="fas fa-check"></i> Nutrition consultation</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;">Choose Plan</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-title">Elite Package</div>
+                    <div class="pricing-price">$129</div>
+                    <div class="pricing-duration">per month</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Pro</li>
+                        <li><i class="fas fa-check"></i> Unlimited PT sessions</li>
+                        <li><i class="fas fa-check"></i> Spa & sauna access</li>
+                        <li><i class="fas fa-check"></i> Priority equipment</li>
+                        <li><i class="fas fa-check"></i> Guest passes (2/month)</li>
+                    </ul>
+                    <button class="btn btn-outline" style="width: 100%;">Choose Plan</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> nutrimind.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

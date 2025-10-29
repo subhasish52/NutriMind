@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans - NutriMind.AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">Nutri<span class="text-primary">Mind</span></a>
+                <div class="nav-links desktop-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="subscription.html">Pricing</a>
+                </div>
+                <div class="auth-buttons desktop-nav">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px; padding-bottom: 80px;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Choose Your <span class="text-primary">Plan</span></h1>
+                <p class="section-description">Select the perfect plan for your fitness journey</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-title">Basic</div>
+                    <div class="pricing-price">$29</div>
+                    <div class="pricing-duration">per month</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Access to workout videos</li>
+                        <li><i class="fas fa-check"></i> Basic nutrition guide</li>
+                        <li><i class="fas fa-check"></i> Progress tracking</li>
+                        <li><i class="fas fa-check"></i> Community access</li>
+                        <li><i class="fas fa-times" style="color: var(--muted-foreground);"></i> Personal coaching</li>
+                    </ul>
+                    <button class="btn btn-outline" style="width: 100%;">Get Started</button>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">Most Popular</span>
+                    <div class="pricing-title">Premium</div>
+                    <div class="pricing-price">$59</div>
+                    <div class="pricing-duration">per month</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Basic</li>
+                        <li><i class="fas fa-check"></i> Personal coaching sessions</li>
+                        <li><i class="fas fa-check"></i> Custom meal plans</li>
+                        <li><i class="fas fa-check"></i> AI-powered training</li>
+                        <li><i class="fas fa-check"></i> Priority support</li>
+                    </ul>
+                    <button class="btn btn-primary" style="width: 100%;">Get Started</button>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-title">Elite</div>
+                    <div class="pricing-price">$99</div>
+                    <div class="pricing-duration">per month</div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Everything in Premium</li>
+                        <li><i class="fas fa-check"></i> Unlimited coaching</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
+                        <li><i class="fas fa-check"></i> Exclusive workshops</li>
+                        <li><i class="fas fa-check"></i> VIP community access</li>
+                    </ul>
+                    <button class="btn btn-outline" style="width: 100%;">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> nutrimind.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

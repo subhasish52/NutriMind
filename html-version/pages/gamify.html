@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamification - NutriMind.AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">Nutri<span class="text-primary">Mind</span></a>
+                <div class="nav-links desktop-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="gamify.html">Gamification</a>
+                </div>
+                <div class="auth-buttons desktop-nav">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px; padding-bottom: 80px;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Level Up Your <span class="text-primary">Fitness</span></h1>
+                <p class="section-description">Earn rewards, complete challenges, and track your achievements</p>
+            </div>
+            
+            <div class="card" style="padding: 40px; margin-bottom: 40px; text-align: center;">
+                <div style="display: inline-block; background: linear-gradient(135deg, var(--primary) 0%, hsl(0, 70%, 45%) 100%); width: 120px; height: 120px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; position: relative;">
+                    <div style="font-size: 48px; font-weight: 700; color: white;">15</div>
+                    <div style="position: absolute; bottom: -10px; right: -10px; background-color: var(--card); border: 3px solid var(--primary); width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-star" style="color: var(--primary);"></i>
+                    </div>
+                </div>
+                <h2>Level 15 Athlete</h2>
+                <p style="color: var(--muted-foreground); margin-top: 8px;">350 XP to next level</p>
+                <div style="background-color: var(--background); border-radius: 20px; height: 10px; margin: 20px auto; max-width: 400px; overflow: hidden;">
+                    <div style="background: linear-gradient(90deg, var(--primary) 0%, hsl(0, 70%, 45%) 100%); height: 100%; width: 70%;"></div>
+                </div>
+            </div>
+            
+            <div class="section-header">
+                <h2 class="section-title">Daily <span class="text-primary">Challenges</span></h2>
+            </div>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-fire"></i></div>
+                    <h3>Calorie Burner</h3>
+                    <p>Burn 500 calories today</p>
+                    <div style="background-color: var(--background); border-radius: 20px; height: 8px; margin: 16px 0; overflow: hidden;">
+                        <div style="background: var(--primary); height: 100%; width: 60%;"></div>
+                    </div>
+                    <p style="font-size: 14px; color: var(--muted-foreground);">300 / 500 calories</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-running"></i></div>
+                    <h3>Step Master</h3>
+                    <p>Walk 10,000 steps today</p>
+                    <div style="background-color: var(--background); border-radius: 20px; height: 8px; margin: 16px 0; overflow: hidden;">
+                        <div style="background: var(--primary); height: 100%; width: 85%;"></div>
+                    </div>
+                    <p style="font-size: 14px; color: var(--muted-foreground);">8,543 / 10,000 steps</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-dumbbell"></i></div>
+                    <h3>Workout Warrior</h3>
+                    <p>Complete 3 workouts</p>
+                    <div style="background-color: var(--background); border-radius: 20px; height: 8px; margin: 16px 0; overflow: hidden;">
+                        <div style="background: var(--primary); height: 100%; width: 66%;"></div>
+                    </div>
+                    <p style="font-size: 14px; color: var(--muted-foreground);">2 / 3 workouts</p>
+                </div>
+                
+                <div class="tool-card">
+                    <div class="tool-icon"><i class="fas fa-tint"></i></div>
+                    <h3>Hydration Hero</h3>
+                    <p>Drink 2 liters of water</p>
+                    <div style="background-color: var(--background); border-radius: 20px; height: 8px; margin: 16px 0; overflow: hidden;">
+                        <div style="background: var(--primary); height: 100%; width: 100%;"></div>
+                    </div>
+                    <p style="font-size: 14px; color: var(--primary);">✓ Completed!</p>
+                </div>
+            </div>
+            
+            <div class="section-header" style="margin-top: 60px;">
+                <h2 class="section-title">Your <span class="text-primary">Achievements</span></h2>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+                    <h3>First Workout</h3>
+                    <p>Completed your first workout session</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-medal"></i></div>
+                    <h3>Week Warrior</h3>
+                    <p>Trained for 7 consecutive days</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-award"></i></div>
+                    <h3>Century Club</h3>
+                    <p>Completed 100 workouts</p>
+                </div>
+                
+                <div class="feature-card" style="opacity: 0.5;">
+                    <div class="feature-icon"><i class="fas fa-crown"></i></div>
+                    <h3>Fitness King</h3>
+                    <p>Reach level 20 (Locked)</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> nutrimind.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

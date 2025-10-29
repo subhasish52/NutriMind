@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Tracking - NutriMind.AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">Nutri<span class="text-primary">Mind</span></a>
+                <div class="nav-links desktop-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="health-tracking.html">Health Tracking</a>
+                </div>
+                <div class="auth-buttons desktop-nav">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px; padding-bottom: 80px;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Health <span class="text-primary">Tracking</span></h1>
+                <p class="section-description">Monitor your health metrics and track your progress</p>
+            </div>
+            
+            <div class="profile-stats" style="margin-bottom: 60px;">
+                <div class="stat-box">
+                    <div class="stat-box-value">72 kg</div>
+                    <div class="stat-box-label">Current Weight</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-box-value">22.5</div>
+                    <div class="stat-box-label">BMI</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-box-value">2,450</div>
+                    <div class="stat-box-label">Calories Today</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-box-value">8,543</div>
+                    <div class="stat-box-label">Steps Today</div>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 40px;">
+                <div class="card" style="padding: 32px;">
+                    <h3 style="margin-bottom: 20px;"><i class="fas fa-chart-line text-primary"></i> Weight Progress</h3>
+                    <div style="height: 200px; background: linear-gradient(135deg, var(--background) 0%, var(--secondary) 100%); border-radius: var(--radius); display: flex; align-items: center; justify-content: center;">
+                        <p style="color: var(--muted-foreground);">Weight chart visualization</p>
+                    </div>
+                </div>
+                
+                <div class="card" style="padding: 32px;">
+                    <h3 style="margin-bottom: 20px;"><i class="fas fa-fire text-primary"></i> Calorie Tracking</h3>
+                    <div style="height: 200px; background: linear-gradient(135deg, var(--background) 0%, var(--secondary) 100%); border-radius: var(--radius); display: flex; align-items: center; justify-content: center;">
+                        <p style="color: var(--muted-foreground);">Calorie chart visualization</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" style="padding: 40px; margin-bottom: 40px;">
+                <h3 style="margin-bottom: 24px;">Log Your Metrics</h3>
+                <form onsubmit="event.preventDefault(); showToast('Metrics saved successfully!');">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label class="form-label">Weight (kg)</label>
+                            <input type="number" step="0.1" class="form-input" placeholder="72.5" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Calories</label>
+                            <input type="number" class="form-input" placeholder="2450" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Steps</label>
+                            <input type="number" class="form-input" placeholder="8543" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Water (liters)</label>
+                            <input type="number" step="0.1" class="form-input" placeholder="2.5" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+                        Save Metrics <i class="fas fa-save"></i>
+                    </button>
+                </form>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Heart Rate</h3>
+                    <p>Monitor your heart rate zones during workouts</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bed"></i></div>
+                    <h3>Sleep Quality</h3>
+                    <p>Track your sleep patterns and quality</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-tint"></i></div>
+                    <h3>Hydration</h3>
+                    <p>Log your daily water intake</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>Nutrition</h3>
+                    <p>Track macros and micronutrients</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> nutrimind.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/animations.js"></script>
+</body>
+</html>

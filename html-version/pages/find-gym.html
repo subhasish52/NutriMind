@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Gym - NutriMind.AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">Nutri<span class="text-primary">Mind</span></a>
+                <div class="nav-links desktop-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="find-gym.html">Find Gym</a>
+                </div>
+                <div class="auth-buttons desktop-nav">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px; padding-bottom: 80px;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Find Your <span class="text-primary">Perfect Gym</span></h1>
+                <p class="section-description">Search for gyms near you and discover the best fitness facilities</p>
+            </div>
+            
+            <div class="gym-finder-card">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Enter your location (e.g., New York, NY)">
+                    <button class="btn btn-primary"><i class="fas fa-search"></i> Search Gyms</button>
+                </div>
+            </div>
+            
+            <div style="margin: 40px 0;">
+                <div style="width: 100%; height: 400px; background: linear-gradient(135deg, var(--card) 0%, var(--secondary) 100%); border-radius: var(--radius); display: flex; align-items: center; justify-content: center; border: 1px solid var(--border);">
+                    <div style="text-align: center;">
+                        <i class="fas fa-map-marked-alt" style="font-size: 64px; color: var(--primary); margin-bottom: 16px;"></i>
+                        <p style="color: var(--muted-foreground);">Map will display gym locations based on your search</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-header">
+                <h2 class="section-title">Featured <span class="text-primary">Gyms</span></h2>
+            </div>
+            
+            <div class="gyms-grid">
+                <div class="gym-card">
+                    <h3>Gold's Gym Downtown</h3>
+                    <p>123 Fitness Street, New York, NY</p>
+                    <p class="gym-distance">2.5 km away</p>
+                    <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: 16px;">View Details</button>
+                </div>
+                
+                <div class="gym-card">
+                    <h3>Anytime Fitness Central</h3>
+                    <p>456 Workout Ave, New York, NY</p>
+                    <p class="gym-distance">3.2 km away</p>
+                    <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: 16px;">View Details</button>
+                </div>
+                
+                <div class="gym-card">
+                    <h3>CultFit Studio</h3>
+                    <p>789 Health Blvd, New York, NY</p>
+                    <p class="gym-distance">1.8 km away</p>
+                    <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: 16px;">View Details</button>
+                </div>
+                
+                <div class="gym-card">
+                    <h3>Fitness First Plaza</h3>
+                    <p>321 Gym Road, New York, NY</p>
+                    <p class="gym-distance">4.1 km away</p>
+                    <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: 16px;">View Details</button>
+                </div>
+                
+                <div class="gym-card">
+                    <h3>Snap Fitness Hub</h3>
+                    <p>654 Sport Lane, New York, NY</p>
+                    <p class="gym-distance">2.9 km away</p>
+                    <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: 16px;">View Details</button>
+                </div>
+                
+                <div class="gym-card">
+                    <h3>Talwalkar's Better Value</h3>
+                    <p>987 Training St, New York, NY</p>
+                    <p class="gym-distance">3.7 km away</p>
+                    <button class="btn btn-outline btn-sm" style="width: 100%; margin-top: 16px;">View Details</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> nutrimind.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>

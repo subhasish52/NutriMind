@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - NutriMind.AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/cards.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">Nutri<span class="text-primary">Mind</span></a>
+                <div class="nav-links desktop-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="profile.html">Profile</a>
+                </div>
+                <div class="auth-buttons desktop-nav">
+                    <button onclick="logout()" class="btn btn-primary">Logout</button>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px; padding-bottom: 80px;">
+        <div class="container" style="max-width: 900px;">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <div class="profile-avatar"></div>
+                    <div class="profile-info">
+                        <h2 id="profileName">User Name</h2>
+                        <p id="profileEmail">user@email.com</p>
+                        <span class="blog-category" id="profilePlan">Premium Member</span>
+                    </div>
+                </div>
+                
+                <div class="profile-stats">
+                    <div class="stat-box">
+                        <div class="stat-box-value">45</div>
+                        <div class="stat-box-label">Workouts</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-box-value">12</div>
+                        <div class="stat-box-label">Weeks Active</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-box-value">8kg</div>
+                        <div class="stat-box-label">Progress</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-box-value">95%</div>
+                        <div class="stat-box-label">Goals Met</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="profile-card">
+                <h3 style="margin-bottom: 24px;">Edit Profile</h3>
+                <form onsubmit="handleProfileUpdate(event)">
+                    <div class="form-group">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" id="name" class="form-input" placeholder="Your name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Email</label>
+                        <input type="email" id="email" class="form-input" placeholder="Your email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Phone</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="Your phone number">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Fitness Goals</label>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 8px;">
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" name="goals" value="Weight Loss">
+                                <span>Weight Loss</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" name="goals" value="Muscle Gain">
+                                <span>Muscle Gain</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" name="goals" value="Endurance">
+                                <span>Endurance</span>
+                            </label>
+                            <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                                <input type="checkbox" name="goals" value="Flexibility">
+                                <span>Flexibility</span>
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        Update Profile <i class="fas fa-save"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> nutrimind.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+    <script src="../js/auth.js"></script>
+    <script>
+        // Load user data
+        const user = checkAuth();
+        if (user) {
+            document.getElementById('profileName').textContent = user.name;
+            document.getElementById('profileEmail').textContent = user.email;
+            document.getElementById('profilePlan').textContent = user.membershipPlan + ' Member';
+            document.getElementById('name').value = user.name;
+            document.getElementById('email').value = user.email;
+            document.getElementById('phone').value = user.phone || '';
+        }
+    </script>
+</body>
+</html>

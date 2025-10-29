@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriMind.AI - Your Fitness Journey Starts Here</title>
+    <meta name="description" content="Transform Your Body with nutrimind.ai. Expert Coaching, Tailored Workout Plans, and Comprehensive Nutritional Guidance.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/cards.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="index.html" class="logo">
+                    Nutri<span class="text-primary">Mind</span>
+                </a>
+                
+                <div class="nav-links desktop-nav">
+                    <a href="index.html">Home</a>
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            Services <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="pages/services.html">Our Services</a>
+                            <a href="pages/subscription.html">Track/Buy Subscription</a>
+                            <a href="pages/tools.html">Our Fitness Tools</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            Train With Us <i class="fas fa-chevron-down"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="pages/train-with-us.html">Personal Coaching</a>
+                            <a href="pages/train-with-ai.html">Train with nutrimind.ai</a>
+                        </div>
+                    </div>
+                    <a href="pages/contact.html">Contact Us</a>
+                </div>
+                
+                <div class="auth-buttons desktop-nav">
+                    <a href="pages/login.html" class="btn btn-outline">Login</a>
+                    <a href="pages/signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html">Home</a>
+                <a href="pages/services.html">Our Services</a>
+                <a href="pages/subscription.html">Track/Buy Subscription</a>
+                <a href="pages/tools.html">Our Fitness Tools</a>
+                <a href="pages/train-with-us.html">Personal Coaching</a>
+                <a href="pages/train-with-ai.html">Train with nutrimind.ai</a>
+                <a href="pages/contact.html">Contact Us</a>
+                <div class="mobile-auth">
+                    <a href="pages/login.html" class="btn btn-outline">Login</a>
+                    <a href="pages/signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-image"></div>
+        
+        <div class="hero-stats">
+            <div class="stat-card">
+                <div class="stat-number">+1300</div>
+                <div class="stat-label">Positive Reviews</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">+80</div>
+                <div class="stat-label">Coaches</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">+1000</div>
+                <div class="stat-label">Workout Videos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">+1500</div>
+                <div class="stat-label">Trainers</div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1 class="hero-title">Achieve Your</h1>
+                    <h1 class="hero-title-highlight">FITNESS GOALS</h1>
+                    <h1 class="hero-title">With NutriMind</h1>
+                    <p class="hero-description">
+                        "Join The NutriMind.AI Community And Transform Your Fitness Journey. Our Expert Coaches And Personalized Programs Are Designed To Help You Achieve Your Goals And Exceed Your Expectations. Ready To Make A Change?"
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="pages/signup.html" class="btn btn-primary btn-lg">Start Your Journey</a>
+                        <a href="pages/gym-packages.html" class="btn btn-outline btn-lg">Explore Programs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hero-stats-bar">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">96%</div>
+                        <div class="stat-title">Client Satisfaction</div>
+                        <div class="stat-desc">Our Members Love Their Results And Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">+5</div>
+                        <div class="stat-title">Years Of Experience</div>
+                        <div class="stat-desc">Trust In Our Proven Track Record Of Transforming Lives</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">+800</div>
+                        <div class="stat-title">Active Members</div>
+                        <div class="stat-desc">Join Our Thriving Fitness Community</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-title">Support Available</div>
+                        <div class="stat-desc">Expert Assistance Whenever You Need It</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gym Finder Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Find Your Perfect <span class="text-primary">Gym</span></h2>
+                <p class="section-description">Discover gyms near you with our advanced search tool</p>
+            </div>
+            
+            <div class="gym-finder-card">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Enter your location...">
+                    <button class="btn btn-primary"><i class="fas fa-search"></i> Search Gyms</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gym Affiliations Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our <span class="text-primary">Partner Gyms</span></h2>
+                <p class="section-description">We partner with the best gyms to bring you quality fitness experiences</p>
+            </div>
+            
+            <div class="gyms-grid">
+                <div class="gym-card">
+                    <h3>Gold's Gym</h3>
+                    <p>123 Fitness Street</p>
+                    <p class="gym-distance">2.5 km away</p>
+                </div>
+                <div class="gym-card">
+                    <h3>Anytime Fitness</h3>
+                    <p>456 Workout Ave</p>
+                    <p class="gym-distance">3.2 km away</p>
+                </div>
+                <div class="gym-card">
+                    <h3>CultFit</h3>
+                    <p>789 Health Blvd</p>
+                    <p class="gym-distance">1.8 km away</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trainers Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Meet Our Expert <span class="text-primary">Trainers</span></h2>
+                <p class="section-description">Certified professionals dedicated to your success</p>
+            </div>
+            
+            <div class="trainers-grid">
+                <div class="trainer-card">
+                    <div class="trainer-image"></div>
+                    <h3>John Smith</h3>
+                    <p class="trainer-role">Senior Trainer</p>
+                    <p class="trainer-specialty">Strength & Conditioning</p>
+                    <button class="btn btn-outline btn-sm">Learn More</button>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image"></div>
+                    <h3>Sarah Johnson</h3>
+                    <p class="trainer-role">Yoga Instructor</p>
+                    <p class="trainer-specialty">Flexibility & Wellness</p>
+                    <button class="btn btn-outline btn-sm">Learn More</button>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image"></div>
+                    <h3>Mike Davis</h3>
+                    <p class="trainer-role">Nutrition Coach</p>
+                    <p class="trainer-specialty">Diet & Meal Planning</p>
+                    <button class="btn btn-outline btn-sm">Learn More</button>
+                </div>
+                <div class="trainer-card">
+                    <div class="trainer-image"></div>
+                    <h3>Emma Wilson</h3>
+                    <p class="trainer-role">Cardio Specialist</p>
+                    <p class="trainer-specialty">Endurance Training</p>
+                    <button class="btn btn-outline btn-sm">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest from Our <span class="text-primary">Blog</span></h2>
+                <p class="section-description">Tips, tricks, and insights for your fitness journey</p>
+            </div>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image"></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Nutrition</span>
+                        <h3>Balanced Diet Tips</h3>
+                        <p>Learn how to create a balanced meal plan for optimal results</p>
+                        <a href="pages/blog.html" class="btn btn-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image"></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Training</span>
+                        <h3>HIIT Training Guide</h3>
+                        <p>Maximize your workout efficiency with high-intensity training</p>
+                        <a href="pages/blog.html" class="btn btn-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image"></div>
+                    <div class="blog-content">
+                        <span class="blog-category">Motivation</span>
+                        <h3>Stay Motivated</h3>
+                        <p>Discover strategies to keep your fitness motivation high</p>
+                        <a href="pages/blog.html" class="btn btn-outline btn-sm">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our <span class="text-primary">Customers Say</span></h2>
+                <p class="section-description">At This Part You Can See Few Of The Many Positive Reviews Of Our Customers.</p>
+            </div>
+            
+            <div class="testimonial-container">
+                <div class="testimonial-images">
+                    <div class="testimonial-image"></div>
+                    <div class="testimonial-image"></div>
+                </div>
+                <div class="testimonial-content">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <h3 class="text-primary">Steven Haward</h3>
+                    <p class="testimonial-role">Our Trainer</p>
+                    <p class="testimonial-text">
+                        I've Been Using nutrimind.ai For The Past Three Months, And I'm Genuinely Impressed. The Website Is Easy To Navigate And Everything Is Laid Out Clearly. I Purchased The Premium Plan And The Personalized Coaching Has Been A Game-Changer For Me.
+                    </p>
+                    <div class="testimonial-nav">
+                        <button class="btn btn-outline btn-sm"><i class="fas fa-chevron-left"></i></button>
+                        <button class="btn btn-outline btn-sm"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked <span class="text-primary">Questions</span></h2>
+                <p class="section-description">Find answers to common questions about our services</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        What makes NutriMind different from other fitness platforms?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>NutriMind combines personalized coaching, AI-powered training, and comprehensive nutrition guidance all in one platform.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        How do I get started?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Simply sign up for an account, choose your plan, and start your fitness journey with our expert guidance.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        Can I cancel my subscription anytime?
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes, you can cancel your subscription at any time with no hidden fees or penalties.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">nutrimind<span class="text-primary">.ai</span></h3>
+                    <p class="footer-desc">
+                        Transform Your Body with nutrimind.ai, Your Trusted Partner in Fitness. With Over 5 Years of Experience, We Offer Expert Coaching, Tailored Workout Plans, and Comprehensive Nutritional Guidance.
+                    </p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="text-primary">Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="pages/services.html">Our Services</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="pages/blog.html">Blog</a></li>
+                        <li><a href="pages/contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="text-primary">Resources</h4>
+                    <ul>
+                        <li><a href="pages/tools.html">Fitness Tools</a></li>
+                        <li><a href="#">Workout Videos</a></li>
+                        <li><a href="#">Nutrition Guides</a></li>
+                        <li><a href="pages/subscription.html">Membership</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4 class="text-primary">Contact Us</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt text-primary"></i>
+                            <span>USA - Washington DC</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone text-primary"></i>
+                            <span>1234-56789</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope text-primary"></i>
+                            <span>contact@nutrimind.ai</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> nutrimind.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/navbar.js"></script>
+    <script src="js/animations.js"></script>
+</body>
+</html>

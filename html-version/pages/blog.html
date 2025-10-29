@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - NutriMind.AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">Nutri<span class="text-primary">Mind</span></a>
+                <div class="nav-links desktop-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+                <div class="auth-buttons desktop-nav">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px; padding-bottom: 80px;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Fitness <span class="text-primary">Blog</span></h1>
+                <p class="section-description">Tips, guides, and insights for your fitness journey</p>
+                <div style="max-width: 500px; margin: 32px auto 0;">
+                    <input type="text" class="form-input" placeholder="Search articles...">
+                </div>
+            </div>
+            
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image"></div>
+                    <div class="blog-content">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span class="blog-category">Nutrition</span>
+                            <span style="color: var(--muted-foreground); font-size: 14px;">Dec 15, 2024</span>
+                        </div>
+                        <h3>Mastering Your Diet: A Complete Guide to Balanced Nutrition</h3>
+                        <p>Discover the fundamentals of nutrition and how to create a balanced diet that supports your fitness goals and overall health.</p>
+                        <button class="btn btn-outline btn-sm">Read More</button>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image"></div>
+                    <div class="blog-content">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span class="blog-category">Training</span>
+                            <span style="color: var(--muted-foreground); font-size: 14px;">Dec 12, 2024</span>
+                        </div>
+                        <h3>HIIT Training: Maximize Results in Minimum Time</h3>
+                        <p>Learn how High-Intensity Interval Training can transform your fitness routine and help you achieve remarkable results efficiently.</p>
+                        <button class="btn btn-outline btn-sm">Read More</button>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image"></div>
+                    <div class="blog-content">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span class="blog-category">Motivation</span>
+                            <span style="color: var(--muted-foreground); font-size: 14px;">Dec 10, 2024</span>
+                        </div>
+                        <h3>Staying Motivated: Psychology of Fitness Success</h3>
+                        <p>Explore proven strategies to maintain motivation and consistency in your fitness journey, even when challenges arise.</p>
+                        <button class="btn btn-outline btn-sm">Read More</button>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image"></div>
+                    <div class="blog-content">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span class="blog-category">Strength</span>
+                            <span style="color: var(--muted-foreground); font-size: 14px;">Dec 8, 2024</span>
+                        </div>
+                        <h3>Building Muscle: Science-Based Training Principles</h3>
+                        <p>Understand the science behind muscle growth and learn effective training techniques to maximize your strength gains.</p>
+                        <button class="btn btn-outline btn-sm">Read More</button>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image"></div>
+                    <div class="blog-content">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span class="blog-category">Lifestyle</span>
+                            <span style="color: var(--muted-foreground); font-size: 14px;">Dec 5, 2024</span>
+                        </div>
+                        <h3>Home Workouts: Effective Training Without Equipment</h3>
+                        <p>Discover how to build a comprehensive fitness routine from the comfort of your home with minimal or no equipment.</p>
+                        <button class="btn btn-outline btn-sm">Read More</button>
+                    </div>
+                </div>
+                
+                <div class="blog-card">
+                    <div class="blog-image"></div>
+                    <div class="blog-content">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+                            <span class="blog-category">Recovery</span>
+                            <span style="color: var(--muted-foreground); font-size: 14px;">Dec 3, 2024</span>
+                        </div>
+                        <h3>Recovery Essentials: Rest, Sleep, and Nutrition</h3>
+                        <p>Learn why recovery is crucial for fitness progress and discover strategies to optimize your rest and recuperation.</p>
+                        <button class="btn btn-outline btn-sm">Read More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> nutrimind.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - NutriMind.AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/footer.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <a href="../index.html" class="logo">Nutri<span class="text-primary">Mind</span></a>
+                <div class="nav-links desktop-nav">
+                    <a href="../index.html">Home</a>
+                    <a href="contact.html">Contact Us</a>
+                </div>
+                <div class="auth-buttons desktop-nav">
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="signup.html" class="btn btn-primary">Sign Up</a>
+                </div>
+                <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <main style="padding-top: 100px; padding-bottom: 80px;">
+        <div class="container">
+            <div class="section-header">
+                <h1 class="section-title">Get In <span class="text-primary">Touch</span></h1>
+                <p class="section-description">Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; max-width: 1000px; margin: 0 auto;">
+                <div>
+                    <div class="card" style="padding: 32px; margin-bottom: 24px;">
+                        <h3 style="margin-bottom: 20px;"><i class="fas fa-envelope text-primary"></i> Email</h3>
+                        <p style="color: var(--muted-foreground);">contact@nutrimind.ai</p>
+                    </div>
+                    
+                    <div class="card" style="padding: 32px; margin-bottom: 24px;">
+                        <h3 style="margin-bottom: 20px;"><i class="fas fa-phone text-primary"></i> Phone</h3>
+                        <p style="color: var(--muted-foreground);">1234-56789</p>
+                    </div>
+                    
+                    <div class="card" style="padding: 32px;">
+                        <h3 style="margin-bottom: 20px;"><i class="fas fa-map-marker-alt text-primary"></i> Location</h3>
+                        <p style="color: var(--muted-foreground);">USA - Washington DC</p>
+                    </div>
+                </div>
+                
+                <div class="card" style="padding: 40px;">
+                    <h3 style="margin-bottom: 24px;">Send Us a Message</h3>
+                    <form onsubmit="event.preventDefault(); showToast('Message sent successfully!');">
+                        <div class="form-group">
+                            <label class="form-label">Name</label>
+                            <input type="text" class="form-input" placeholder="Your name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Email</label>
+                            <input type="email" class="form-input" placeholder="Your email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label">Message</label>
+                            <textarea class="form-textarea" placeholder="Your message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3 class="footer-logo">nutrimind<span class="text-primary">.ai</span></h3>
+                    <p class="footer-desc">Transform Your Body with nutrimind.ai</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-primary">Company</h4>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-primary">Resources</h4>
+                    <ul>
+                        <li><a href="tools.html">Fitness Tools</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 class="text-primary">Contact Us</h4>
+                    <p style="color: var(--muted-foreground);">USA - Washington DC</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> nutrimind.ai. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/navbar.js"></script>
+</body>
+</html>
