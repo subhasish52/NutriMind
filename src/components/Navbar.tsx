@@ -42,7 +42,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <span className="text-2xl font-bold">
-              nutrimind<span className="text-primary">.ai</span>
+              Nutri<span className="text-primary">Mind</span>
             </span>
           </Link>
 
@@ -50,41 +50,6 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-8">
             <Link to="/" className="text-foreground hover:text-primary transition-colors">
               Home
-            </Link>
-            
-            {/* Programs Dropdown */}
-            <div className="relative group">
-              <button className="text-foreground hover:text-primary transition-colors flex items-center">
-                Programs
-                <ChevronDown size={16} className="ml-1" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <button onClick={() => scrollToSection('services')} className="block w-full text-left px-4 py-2 hover:bg-accent transition-colors">
-                  Our Services
-                </button>
-                <button onClick={() => scrollToSection('plans')} className="block w-full text-left px-4 py-2 hover:bg-accent transition-colors">
-                  Gym Plans
-                </button>
-              </div>
-            </div>
-
-            <div className="relative group">
-              <button className="text-foreground hover:text-primary transition-colors flex items-center">
-                Coaching
-                <ChevronDown size={16} className="ml-1" />
-              </button>
-              <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
-                <Link to="/train-with-us" className="block px-4 py-2 hover:bg-accent transition-colors">
-                  Personal
-                </Link>
-                <Link to="/train-with-us" className="block px-4 py-2 hover:bg-accent transition-colors">
-                  Online
-                </Link>
-              </div>
-            </div>
-
-            <Link to="/gym-packages" className="text-foreground hover:text-primary transition-colors">
-              Membership
             </Link>
 
             <div className="relative group">
@@ -99,12 +64,26 @@ const Navbar = () => {
                 <Link to="/subscription" className="block px-4 py-2 hover:bg-accent transition-colors">
                   Track/Buy Subscription
                 </Link>
+                <Link to="/tools" className="block px-4 py-2 hover:bg-accent transition-colors">
+                  Our Fitness Tools
+                </Link>
               </div>
             </div>
 
-            <Link to="/train-with-ai" className="text-foreground hover:text-primary transition-colors">
-              Train With AI
-            </Link>
+            <div className="relative group">
+              <button className="text-foreground hover:text-primary transition-colors flex items-center">
+                Train With Us
+                <ChevronDown size={16} className="ml-1" />
+              </button>
+              <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <Link to="/train-with-us" className="block px-4 py-2 hover:bg-accent transition-colors">
+                  Personal Coaching
+                </Link>
+                <Link to="/train-with-ai" className="block px-4 py-2 hover:bg-accent transition-colors">
+                  Train with nutrimind.ai
+                </Link>
+              </div>
+            </div>
 
             <Link to="/contact" className="text-foreground hover:text-primary transition-colors">
               Contact Us
@@ -154,23 +133,20 @@ const Navbar = () => {
               <Link to="/" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
                 Home
               </Link>
-              <button onClick={() => scrollToSection('services')} className="text-left text-foreground hover:text-primary transition-colors py-2">
-                Our Services
-              </button>
-              <button onClick={() => scrollToSection('plans')} className="text-left text-foreground hover:text-primary transition-colors py-2">
-                Gym Plans
-              </button>
-              <Link to="/train-with-us" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
-                Coaching
-              </Link>
-              <Link to="/gym-packages" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
-                Membership
-              </Link>
               <Link to="/our-services" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
-                Services
+                Our Services
+              </Link>
+              <Link to="/subscription" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
+                Track/Buy Subscription
+              </Link>
+              <Link to="/tools" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
+                Our Fitness Tools
+              </Link>
+              <Link to="/train-with-us" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
+                Personal Coaching
               </Link>
               <Link to="/train-with-ai" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
-                Train With AI
+                Train with nutrimind.ai
               </Link>
               <Link to="/contact" onClick={() => setIsOpen(false)} className="text-foreground hover:text-primary transition-colors py-2">
                 Contact Us

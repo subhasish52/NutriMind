@@ -12,6 +12,7 @@ import Profile from "./pages/Profile";
 import TrainWithUs from "./pages/TrainWithUs";
 import TrainWithAI from "./pages/TrainWithAI";
 import FindGym from "./pages/FindGym";
+import Tools from "./pages/Tools";
 import BlogPage from "./pages/BlogPage";
 import Contact from "./pages/Contact";
 import GymPackages from "./pages/GymPackages";
@@ -44,6 +45,7 @@ const App = () => {
               <Route path="/gym-packages" element={<GymPackages />} />
               <Route path="/our-services" element={<ProtectedRoute><OurServices /></ProtectedRoute>} />
               <Route path="/subscription" element={<ProtectedRoute><Subscription /></ProtectedRoute>} />
+              <Route path="/tools" element={<Tools />} />
               <Route path="/health-tracking" element={<ProtectedRoute><HealthTracking /></ProtectedRoute>} />
               <Route path="/gamify" element={<ProtectedRoute><Gamify /></ProtectedRoute>} />
               <Route path="*" element={<NotFound />} />

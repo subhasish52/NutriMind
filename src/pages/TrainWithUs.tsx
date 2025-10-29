@@ -2,7 +2,30 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { Users, Award, TrendingUp } from "lucide-react";
+import { Mail, Phone } from "lucide-react";
+import trainer1 from "@/assets/trainer-1.jpg";
+import trainer3 from "@/assets/trainer-3.jpg";
+
+const trainers = [
+  {
+    name: "Arjun Sharma",
+    role: "Personal Trainer",
+    specialty: "Strength Training & Weight Loss",
+    experience: "8 Years Experience",
+    image: trainer1,
+    email: "arjun.sharma@nutrimind.ai",
+    phone: "+91 98765 43210",
+  },
+  {
+    name: "Rohan Patel",
+    role: "Personal Trainer",
+    specialty: "CrossFit & Conditioning",
+    experience: "6 Years Experience",
+    image: trainer3,
+    email: "rohan.patel@nutrimind.ai",
+    phone: "+91 98765 43211",
+  },
+];
 
 const TrainWithUs = () => {
   return (
@@ -17,58 +40,58 @@ const TrainWithUs = () => {
             className="text-center mb-16"
           >
             <h1 className="text-5xl font-bold mb-6">
-              Train With <span className="text-primary">nutrimind.ai</span>
+              Personal <span className="text-primary">Coaching</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Join our community of fitness enthusiasts and work with certified trainers to achieve your goals.
+              Connect with our expert trainers for personalized one-on-one coaching to achieve your fitness goals.
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="bg-card p-8 rounded-lg border border-border text-center"
-            >
-              <Users className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">10,000+</h3>
-              <p className="text-muted-foreground">Active Members</p>
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {trainers.map((trainer, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="bg-card rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300"
+              >
+                <div className="aspect-[4/3] bg-gradient-to-br from-primary/20 to-secondary relative overflow-hidden">
+                  <img 
+                    src={trainer.image} 
+                    alt={`${trainer.name} - ${trainer.specialty}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold mb-1">{trainer.name}</h3>
+                  <p className="text-sm text-primary mb-1">{trainer.role}</p>
+                  <p className="text-sm text-muted-foreground mb-2">{trainer.experience}</p>
+                  <p className="text-sm font-medium mb-4">{trainer.specialty}</p>
+                  
+                  <div className="space-y-2 mb-6">
+                    <div className="flex items-center gap-2 text-sm">
+                      <Mail className="h-4 w-4 text-primary" />
+                      <a href={`mailto:${trainer.email}`} className="hover:text-primary transition-colors">
+                        {trainer.email}
+                      </a>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm">
+                      <Phone className="h-4 w-4 text-primary" />
+                      <a href={`tel:${trainer.phone}`} className="hover:text-primary transition-colors">
+                        {trainer.phone}
+                      </a>
+                    </div>
+                  </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-card p-8 rounded-lg border border-border text-center"
-            >
-              <Award className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">50+</h3>
-              <p className="text-muted-foreground">Certified Trainers</p>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="bg-card p-8 rounded-lg border border-border text-center"
-            >
-              <TrendingUp className="h-12 w-12 text-primary mx-auto mb-4" />
-              <h3 className="text-2xl font-bold mb-2">95%</h3>
-              <p className="text-muted-foreground">Success Rate</p>
-            </motion.div>
+                  <Button className="w-full bg-primary hover:bg-primary/90">
+                    Contact for Personal Training
+                  </Button>
+                </div>
+              </motion.div>
+            ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="text-center"
-          >
-            <Button size="lg" className="text-lg px-8">
-              Get Started Today
-            </Button>
-          </motion.div>
         </div>
       </main>
       <Footer />

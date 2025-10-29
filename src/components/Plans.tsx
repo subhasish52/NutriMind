@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const plans = [
   {
     name: "PRO PLAN",
-    price: "99$",
+    price: "₹999",
     period: "/MNTH",
     description: "Our Pro Plan Offers Advanced Workouts And Personalized Nutrition Coaching To Help You Reach Your Goals Faster. Sign Up Right Now!",
     features: [
@@ -23,8 +23,8 @@ const plans = [
   },
   {
     name: "CUSTOM PLAN",
-    price: "149$",
-    period: "/USDT",
+    price: "₹1499",
+    period: "/MNTH",
     description: "Experience A Fully Tailored Fitness Experience With A Custom Plan That Works One-On-One With A Dedicated Trainer To Achieve Your Goals.",
     features: [
       "Access To All Of Our Exercise Videos",
@@ -40,7 +40,7 @@ const plans = [
   },
   {
     name: "BEGINNER PLAN",
-    price: "49$",
+    price: "₹499",
     period: "/MNTH",
     description: "Start Your Fitness Journey With Our Beginner Plan, Build A Strong Foundation With Basic Workouts And Essential Nutrition Guidance.",
     features: [

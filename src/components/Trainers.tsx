@@ -8,28 +8,16 @@ import trainer4 from "@/assets/trainer-4.jpg";
 
 const trainers = [
   {
-    name: "Sam Cole",
+    name: "Arjun Sharma",
     role: "Personal Trainer",
     specialty: "Strength Training & Weight Loss",
     image: trainer1,
   },
   {
-    name: "Michael Harris",
-    role: "Personal Trainer",
-    specialty: "Muscle Building & Nutrition",
-    image: trainer2,
-  },
-  {
-    name: "John Anderson",
+    name: "Rohan Patel",
     role: "Personal Trainer",
     specialty: "CrossFit & Conditioning",
     image: trainer3,
-  },
-  {
-    name: "Tom Blake",
-    role: "Personal Trainer",
-    specialty: "Yoga & Flexibility",
-    image: trainer4,
   },
 ];
 
@@ -62,7 +50,7 @@ const Trainers = () => {
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12 max-w-4xl mx-auto">
           {trainers.map((trainer, index) => (
             <motion.div
               key={index}

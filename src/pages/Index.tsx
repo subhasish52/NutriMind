@@ -2,9 +2,6 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import GymFinder from "@/components/GymFinder";
 import GymAffiliations from "@/components/GymAffiliations";
-import Services from "@/components/Services";
-import Plans from "@/components/Plans";
-import Tools from "@/components/Tools";
 import Trainers from "@/components/Trainers";
 import Blog from "@/components/Blog";
 import Testimonials from "@/components/Testimonials";
@@ -30,9 +27,6 @@ const Index = () => {
         <GymFinder />
         <GymAffiliations />
         <Trainers />
-        <Services />
-        <Plans />
-        <Tools />
         <Blog />
         <Testimonials />
         <FAQ />
