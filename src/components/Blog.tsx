@@ -1,6 +1,11 @@
 import { motion } from "framer-motion";
 import { Calendar, User, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import blogMuscleBuilding from "@/assets/blog-muscle-building.jpg";
+import blogBalancedDiet from "@/assets/blog-balanced-diet.jpg";
+import blogHiitTraining from "@/assets/blog-hiit-training.jpg";
+import blogHomeWorkouts from "@/assets/blog-home-workouts.jpg";
+import blogMotivation from "@/assets/blog-motivation.jpg";
 
 const blogPosts = [
   {
@@ -8,26 +13,31 @@ const blogPosts = [
     category: "Strength Training",
     date: "August 14",
     author: "Sam Cole",
+    image: blogMuscleBuilding,
   },
   {
     title: "The Ultimate Guide To A Balanced Diet",
     category: "Nutrition",
     date: "August 10",
+    image: blogBalancedDiet,
   },
   {
     title: "The Benefits Of HIIT Training",
     category: "Cardio",
     date: "August 8",
+    image: blogHiitTraining,
   },
   {
     title: "Home Workouts For Busy People",
     category: "Home Workouts",
     date: "August 5",
+    image: blogHomeWorkouts,
   },
   {
     title: "How To Always Stay Motivated",
     category: "Motivation",
     date: "August 2",
+    image: blogMotivation,
   },
 ];
 
@@ -68,7 +78,13 @@ const Blog = () => {
             viewport={{ once: true }}
             className="lg:col-span-2 lg:row-span-2 bg-card rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300 group"
           >
-            <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary" />
+            <div className="aspect-video overflow-hidden">
+              <img 
+                src={blogPosts[0].image} 
+                alt={blogPosts[0].title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+            </div>
             <div className="p-6">
               <div className="flex items-center gap-4 text-sm text-muted-foreground mb-3">
                 <span className="flex items-center">
@@ -94,7 +110,13 @@ const Blog = () => {
               viewport={{ once: true }}
               className="bg-card rounded-lg overflow-hidden border border-border hover:border-primary transition-all duration-300 group"
             >
-              <div className="aspect-video bg-gradient-to-br from-primary/20 to-secondary" />
+              <div className="aspect-video overflow-hidden">
+                <img 
+                  src={post.image} 
+                  alt={post.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <div className="p-4">
                 <div className="flex items-center gap-4 text-xs text-muted-foreground mb-2">
                   <span className="flex items-center">

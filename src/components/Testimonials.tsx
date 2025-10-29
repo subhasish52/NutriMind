@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import testimonial1 from "@/assets/testimonial-1.jpg";
+import testimonial2 from "@/assets/testimonial-2.jpg";
 
 const testimonials = [
   {
@@ -40,8 +42,20 @@ const Testimonials = () => {
             {/* Testimonial Images */}
             <div className="relative">
               <div className="grid grid-cols-2 gap-4">
-                <div className="aspect-[3/4] bg-gradient-to-br from-primary/20 to-secondary rounded-lg" />
-                <div className="aspect-[3/4] bg-gradient-to-br from-primary/30 to-secondary rounded-lg mt-8" />
+                <div className="aspect-[3/4] rounded-lg overflow-hidden">
+                  <img 
+                    src={testimonial1} 
+                    alt="Happy customer"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="aspect-[3/4] rounded-lg overflow-hidden mt-8">
+                  <img 
+                    src={testimonial2} 
+                    alt="Satisfied customer"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </div>
 

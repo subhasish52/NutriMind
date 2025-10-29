@@ -1,14 +1,20 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { MapPin } from 'lucide-react';
+import cultfitLogo from '@/assets/gym-logo-cultfit.png';
+import goldsLogo from '@/assets/gym-logo-golds.png';
+import anytimeLogo from '@/assets/gym-logo-anytime.png';
+import fitnessFirstLogo from '@/assets/gym-logo-fitnessfirst.png';
+import snapLogo from '@/assets/gym-logo-snap.png';
+import talwalkarsLogo from '@/assets/gym-logo-talwalkars.png';
 
 const gyms = [
-  { name: 'CultFit', location: 'Mumbai', logo: '💪' },
-  { name: "Gold's Gym", location: 'Delhi', logo: '🏋️' },
-  { name: 'Anytime Fitness', location: 'Bangalore', logo: '⏰' },
-  { name: 'Fitness First', location: 'Pune', logo: '🎯' },
-  { name: 'Snap Fitness', location: 'Hyderabad', logo: '⚡' },
-  { name: 'Talwalkars', location: 'Chennai', logo: '🔥' },
+  { name: 'CultFit', location: 'Mumbai', logo: cultfitLogo },
+  { name: "Gold's Gym", location: 'Delhi', logo: goldsLogo },
+  { name: 'Anytime Fitness', location: 'Bangalore', logo: anytimeLogo },
+  { name: 'Fitness First', location: 'Pune', logo: fitnessFirstLogo },
+  { name: 'Snap Fitness', location: 'Hyderabad', logo: snapLogo },
+  { name: 'Talwalkars', location: 'Chennai', logo: talwalkarsLogo },
 ];
 
 const GymAffiliations = () => {
@@ -42,7 +48,13 @@ const GymAffiliations = () => {
               >
                 <Card className="w-64 bg-card/50 border-primary/20 hover:border-primary/50 transition-all">
                   <CardContent className="p-6 text-center">
-                    <div className="text-6xl mb-4">{gym.logo}</div>
+                    <div className="h-24 mb-4 flex items-center justify-center">
+                      <img 
+                        src={gym.logo} 
+                        alt={`${gym.name} logo`}
+                        className="max-h-full max-w-full object-contain"
+                      />
+                    </div>
                     <h3 className="text-xl font-bold mb-2">{gym.name}</h3>
                     <div className="flex items-center justify-center gap-2 text-muted-foreground">
                       <MapPin size={16} className="text-primary" />
