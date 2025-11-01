@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Calendar, User, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import blogMuscleBuilding from "@/assets/blog-muscle-building.jpg";
 import blogBalancedDiet from "@/assets/blog-balanced-diet.jpg";
 import blogHiitTraining from "@/assets/blog-hiit-training.jpg";
@@ -9,6 +10,7 @@ import blogMotivation from "@/assets/blog-motivation.jpg";
 
 const blogPosts = [
   {
+    id: "muscle-building",
     title: "5 Essential Exercises For Building Muscle",
     category: "Strength Training",
     date: "August 14",
@@ -16,24 +18,28 @@ const blogPosts = [
     image: blogMuscleBuilding,
   },
   {
+    id: "mastering-diet",
     title: "The Ultimate Guide To A Balanced Diet",
     category: "Nutrition",
     date: "August 10",
     image: blogBalancedDiet,
   },
   {
+    id: "hiit-training",
     title: "The Benefits Of HIIT Training",
     category: "Cardio",
     date: "August 8",
     image: blogHiitTraining,
   },
   {
+    id: "home-workouts",
     title: "Home Workouts For Busy People",
     category: "Home Workouts",
     date: "August 5",
     image: blogHomeWorkouts,
   },
   {
+    id: "staying-motivated",
     title: "How To Always Stay Motivated",
     category: "Motivation",
     date: "August 2",
@@ -95,9 +101,11 @@ const Blog = () => {
                 </span>
               </div>
               <h3 className="text-2xl font-bold mb-3">{blogPosts[0].title}</h3>
-              <Button variant="link" className="text-primary p-0">
-                Learn More →
-              </Button>
+              <Link to={`/blog/${blogPosts[0].id}`}>
+                <Button variant="link" className="text-primary p-0">
+                  Learn More →
+                </Button>
+              </Link>
             </div>
           </motion.div>
 
@@ -127,9 +135,11 @@ const Blog = () => {
                   </span>
                 </div>
                 <h3 className="text-lg font-bold mb-2">{post.title}</h3>
-                <Button variant="link" className="text-primary p-0 text-sm">
-                  Learn More →
-                </Button>
+                <Link to={`/blog/${post.id}`}>
+                  <Button variant="link" className="text-primary p-0 text-sm">
+                    Learn More →
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           ))}

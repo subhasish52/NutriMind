@@ -49,21 +49,21 @@ const Contact = () => {
                   <Mail className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Email</h3>
-                    <p className="text-muted-foreground">contact@nutrimind.ai</p>
+                    <p className="text-muted-foreground">nutrimind.ai@gym.in</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <Phone className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Phone</h3>
-                    <p className="text-muted-foreground">1234-56789</p>
+                    <p className="text-muted-foreground">+91 7978833654</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <MapPin className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
                     <h3 className="font-semibold mb-1">Location</h3>
-                    <p className="text-muted-foreground">USA - Washington DC</p>
+                    <p className="text-muted-foreground">Silicon University, Bhubaneswar, Odisha</p>
                   </div>
                 </div>
               </div>

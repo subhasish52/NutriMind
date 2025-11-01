@@ -21,6 +21,7 @@ import Subscription from "./pages/Subscription";
 import HealthTracking from "./pages/HealthTracking";
 import Gamify from "./pages/Gamify";
 import NotFound from "./pages/NotFound";
+import BlogDetail from "./pages/BlogDetail";
 
 const queryClient = new QueryClient();
 
@@ -40,7 +41,8 @@ const App = () => {
               <Route path="/train-with-us" element={<TrainWithUs />} />
               <Route path="/train-with-ai" element={<ProtectedRoute><TrainWithAI /></ProtectedRoute>} />
               <Route path="/find-gym" element={<FindGym />} />
-              <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/gym-packages" element={<GymPackages />} />
               <Route path="/our-services" element={<ProtectedRoute><OurServices /></ProtectedRoute>} />
